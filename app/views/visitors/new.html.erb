@@ -1,9 +1,20 @@
-<h1>This is Birthday countdown app</h1>
-
-<p>welcome to the home of <span><%=@owner.name%></span>! </p> 
-
-<p>I was born <span><%= @owner.birthdate %></span></p>
-
-<p> Current time is <span> <%= @currenttime %> </span></p>
-
-<p> <span><%= @owner.countdown %></span> days are to go for my birthday!</p>    
+<% content_for :title do %>Foobar Kadigan<% end %>
+<% content_for :description do %>Website of Foobar Kadigan<% end %>
+<section>
+<%= image_tag "test.jpg" %>
+</section>
+<section>
+<div class="column">
+<h3>Stay in touch.</h3> 
+</div>
+<div class="column">
+<div class="form-centered">
+<%= simple_form_for @visitor do |f| %>
+<%= f.error_notification %>
+<%= f.input :email, label: false, :placeholder => 'Your email address...' %>
+<br/>
+<%= f.button :submit, "Sign up for the newsletter", :class => "submit" %>
+<% end %>
+</div>
+</div>
+</section>
