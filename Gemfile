@@ -57,8 +57,14 @@ group :development do
   gem 'better_errors'
   gem 'rails_layout'
   gem 'pg'
+  gem 'sqlite3'
 end 
   
 group :production do
   gem 'pg'
+end
+
+group :test do
+gem 'minitest-spec-rails'
+gem 'minitest-rails-capybara'
 end
